@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   padding: 2rem;
   gap: 2rem;
+  justify-content: center;
 }
 
 .title {
@@ -54,6 +55,8 @@ body {
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: blur(1px);
+  position: relative;
+  z-index: 1;
 }
 
 .benchmark-item.highlighted {
@@ -86,11 +89,10 @@ body {
 
 .expanded-container {
   position: absolute;
-  top: calc(50% + 20px);
+  top: calc(100% + 8px);
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  pointer-events: none;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .benchmark-card {
@@ -100,7 +102,7 @@ body {
   border-radius: 15px;
   width: 300px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: center center;
+  transform-origin: top center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 

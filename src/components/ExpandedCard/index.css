@@ -1,0 +1,23 @@
+.organization {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.org-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.org-icon:hover {
+  opacity: 0.8;
+}
+
+.org-icon img {
+  border-radius: 4px;
+  object-fit: contain;
+} 
