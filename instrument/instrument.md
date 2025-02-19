@@ -41,13 +41,13 @@ src/
 
 1. 初始状态：
 - 显示所有 benchmark tags
-- 有一些 tag 是高亮状态（深色背景白字，如图中的 LegalBench, Stanford HELM）
+- 有一些 tag 是高亮状态（黑色背景白字，如图中的 LegalBench, Stanford HELM）
 - 只有这些高亮状态的 tag 才能展开成卡片
 - 其他 tag 是模糊的普通状态
 
 2. 当鼠标移动到高亮 tag 时：
 - 该 tag 展开成卡片（像 MLE-bench 那样）
-- 相关联的 tag 会变成白背景黑字样式（如图中的 SuperGLUE, STS）
+- 相关联的 tag 也会变成黑色背景白字样式（如图中的 SuperGLUE, STS）
 （是否相关联我们使用  categories: string[];  使用类别标签来判断，如果类别标签有交集，则认为相关联）
 - 其他不相关的 tag 保持模糊状态
 
@@ -58,6 +58,6 @@ src/
 所以关键是：
 - 只有预设为高亮状态的 tag 才有完整的展开卡片交互
 - 其他 tag 只有模糊/清晰的状态变化
-- 相关联的 tag 会用不同样式（白底黑字）标示出来
+- 相关联的 tag 会用不同样式（黑底白字）标示出来
 
 
