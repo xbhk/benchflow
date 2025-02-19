@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffffff, #e6f3ff);
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 40px 0;
+        }
+
+        .benchmark-wall {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benchmark-item {
+            background-color: #1a2634;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .benchmark-item.light {
+            background-color: white;
+            color: black;
+            border: 1px solid #e0e0e0;
+        }
+
+        .benchmark-item:hover {
+            transform: scale(1.05);
+        }
+
+        .benchmark-card {
+            background-color: #1a2634;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 300px;
+        }
+
+        .benchmark-card .description {
+            color: #8b8b8b;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Find the Right Benchmark</div>
+    
+    <div class="benchmark-wall">
+        <div class="benchmark-item">MLE-bench</div>
+        <div class="benchmark-item">SWE-bench Multimodal</div>
+        <div class="benchmark-item light">SuperGLUE</div>
+        <div class="benchmark-item">LegalBench</div>
+        <div class="benchmark-item">Stanford HELM</div>
+        <!-- 其他benchmark项可以继续添加 -->
+    </div>
+
+    <!-- 示例卡片 -->
+    <div class="benchmark-card">
+        <div>MLE-bench</div>
+        <div class="description">A benchmark for measuring how well AI agents perform at machine learning engineering.</div>
+        <div class="organization">Organization</div>
+    </div>
+</body>
+</html>

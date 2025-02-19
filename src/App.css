@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  background: linear-gradient(to right, #ffffff, #e6f3ff);
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.benchmark-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.benchmark-item {
+  background-color: #1a2634;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.benchmark-item.light {
+  background-color: white;
+  color: black;
+  border: 1px solid #e0e0e0;
+}
+
+.benchmark-item:hover {
+  transform: scale(1.05);
+}
+
+.benchmark-card {
+  background-color: #1a2634;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.benchmark-card .description {
+  color: #8b8b8b;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.benchmark-card .organization {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff80;
+}
