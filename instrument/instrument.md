@@ -14,20 +14,26 @@
 ## Project Structure
 ```
 src/
-  components/     
-    BenchmarkWall/        # 整体布局容器
-      index.tsx           # 处理网格布局和背景渐变
-      styles.ts   
-    BenchmarkCard/        # 基础卡片组件
-      index.tsx           # 处理基础展示和 hover 状态
-      styles.ts
-    ExpandedCard/         # 展开状态组件
-      index.tsx           # 处理 Dynamic Island 展开效果
-      styles.ts
-  data/
-    benchmarks.ts         # benchmark 数据配置(接口和具体的benchmark数据)
-  hooks/
-    useMousePosition.ts   # 处理鼠标位置和模糊效果
+├── components/          # 所有React组件
+│   ├── BenchmarkWall/  # 每个组件一个文件夹
+│   │   ├── index.tsx
+│   │   └── styles.css
+│   ├── BenchmarkCard/
+│   |    ├── index.tsx
+│   |    └── styles.css
+│   ├── ExpandedCard/         # 展开状态组件
+│   |    ├── index.tsx           # 处理 Dynamic Island 展开效果
+│        └── styles.css
+├── types/              # 类型定义
+│   └── index.ts       # 集中管理所有类型
+├── data/              # 数据文件
+│   └── benchmarks.ts
+├── styles/            # 全局样式
+│   ├── global.css
+│   └── variables.css
+└── app/               # 应用核心文件
+    ├── App.tsx       # 主应用组件
+    └── main.tsx      # 应用入口
 ```
 
 
