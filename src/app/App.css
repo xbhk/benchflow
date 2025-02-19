@@ -8,34 +8,39 @@ body {
 }
 
 .app-container {
-  min-height: 100vh;
-  padding: 40px 20px;
-  width: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .title {
-  font-size: 64px;
-  font-weight: 800;
-  margin: 60px 0;
   text-align: center;
-  width: 100%;
-  color: #000;
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
 }
 
 .benchmark-wall {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 1rem;
   justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
+}
+
+.benchmark-wall.top {
+  margin-bottom: 1rem;
+}
+
+.benchmark-wall.bottom {
+  margin-top: 1rem;
+}
+
+.benchmark-container {
+  position: relative;
+  padding: 8px;
+  margin: -8px;
 }
 
 .benchmark-item {
@@ -48,6 +53,7 @@ body {
   font-size: 14px;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: blur(1px);
 }
 
 .benchmark-item.highlighted {
@@ -55,11 +61,36 @@ body {
   color: white;
   border: none;
   backdrop-filter: none;
+  filter: blur(0);
+}
+
+.benchmark-item.highlighted.hovered {
+  opacity: 0.3;
+  transform: scale(0.95);
+}
+
+.benchmark-item.related {
+  background: linear-gradient(135deg, #1a2634 0%, #ffffff 100%);
+  color: #1a2634;
+  border: none;
+  filter: blur(0);
+  box-shadow: 0 2px 8px rgba(26, 38, 52, 0.2);
+  font-weight: 500;
 }
 
 .benchmark-item:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  filter: blur(0);
+}
+
+.expanded-container {
+  position: absolute;
+  top: calc(50% + 20px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .benchmark-card {
@@ -67,8 +98,25 @@ body {
   color: white;
   padding: 20px;
   border-radius: 15px;
-  max-width: 300px;
-  margin: 20px auto;
+  width: 300px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.benchmark-card.expanded {
+  animation: expandCard 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes expandCard {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .benchmark-card .description {
